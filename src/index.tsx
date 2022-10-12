@@ -12,7 +12,7 @@ export type PaginationProps = {
   ellipsis?: number
 }
 
-export const Pagination: React.FC<PaginationProps> = ({ page = 1, between = 3, total, limit, changePage = () => {}, next = true, last = false, ellipsis = 0 }: PaginationProps) => {
+export const Pagination = ({ page = 1, between = 3, total, limit, changePage = () => {}, next = true, last = false, ellipsis = 0 }: PaginationProps) => {
 
   const total_pages = Math.ceil(total / limit)
   between = between < 1 ? 1 : between

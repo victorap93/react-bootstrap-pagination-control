@@ -1,5 +1,5 @@
 {
-  "version": "1.0.0",
+  "version": "1.0.1",
   "license": "MIT",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
@@ -38,6 +38,10 @@
   "name": "react-bootstrap-pagination-control",
   "description": "This component automatically controls the pagination display.",
   "author": "Victor Aparecido Barbato Rossi",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/victorap93/react-bootstrap-pagination-control"
+  },
   "homepage": "https://github.com/victorap93",
   "module": "dist/react-bootstrap-pagination-control.esm.js",
   "keywords": ["react", "react-bootstrap", "bootstrap", "pagination-control", "pagination", "control"],
