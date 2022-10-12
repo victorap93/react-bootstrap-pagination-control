@@ -1,7 +1,7 @@
 import React from 'react';
 import { Pagination as RBPagination } from 'react-bootstrap';
 
-export type PaginationProps = {
+export type PaginationControlProps = {
   page?: number,
   between?: number,
   total: number,
@@ -12,7 +12,7 @@ export type PaginationProps = {
   ellipsis?: number
 }
 
-export const Pagination = ({ page = 1, between = 3, total, limit, changePage = () => {}, next = true, last = false, ellipsis = 0 }: PaginationProps) => {
+export const PaginationControl = ({ page = 1, between = 3, total, limit, changePage = () => {}, next = true, last = false, ellipsis = 0 }: PaginationControlProps) => {
 
   const total_pages = Math.ceil(total / limit)
   between = between < 1 ? 1 : between

@@ -1,7 +1,7 @@
 import 'react-app-polyfill/ie11';
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
-import { Pagination } from '../.';
+import { PaginationControl } from '../.';
 import { Container, Row, Col } from 'react-bootstrap';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -13,7 +13,7 @@ const App = () => {
     <Container>
       <Row>
         <Col>
-          <Pagination
+          <PaginationControl
             page={page}
             between={4}
             total={250}

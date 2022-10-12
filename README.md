@@ -27,7 +27,7 @@ import { PaginationControl } from 'react-bootstrap-pagination-control';
 export default () => {
   const [page, setPage] = useState(1)
 
-  return <Pagination
+  return <PaginationControl
     page={page}
     between={4}
     total={250}
