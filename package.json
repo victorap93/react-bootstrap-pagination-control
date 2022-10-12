@@ -35,16 +35,19 @@
     "singleQuote": true,
     "trailingComma": "es5"
   },
-  "name": "react-bootstrap-pagination",
+  "name": "react-bootstrap-pagination-control",
+  "description": "This component automatically controls the pagination display.",
   "author": "Victor Aparecido Barbato Rossi",
-  "module": "dist/react-bootstrap-pagination.esm.js",
+  "homepage": "https://github.com/victorap93",
+  "module": "dist/react-bootstrap-pagination-control.esm.js",
+  "keywords": ["react", "react-bootstrap", "bootstrap", "pagination-control", "pagination", "control"],
   "size-limit": [
     {
-      "path": "dist/react-bootstrap-pagination.cjs.production.min.js",
+      "path": "dist/react-bootstrap-pagination-control.cjs.production.min.js",
       "limit": "10 KB"
     },
     {
-      "path": "dist/react-bootstrap-pagination.esm.js",
+      "path": "dist/react-bootstrap-pagination-control.esm.js",
       "limit": "10 KB"
     }
   ],
