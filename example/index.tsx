@@ -11,7 +11,7 @@ const App = () => {
 
   return (
     <Container>
-      <Row>
+      <Row className='mt-3'>
         <Col>
           <PaginationControl
             page={page}

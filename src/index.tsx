@@ -12,7 +12,7 @@ export type PaginationControlProps = {
   ellipsis?: number
 }
 
-export const PaginationControl = ({ page = 1, between = 3, total, limit, changePage = () => {}, next = true, last = false, ellipsis = 0 }: PaginationControlProps) => {
+export const PaginationControl = ({ page = 1, between = 3, total, limit, changePage = () => { }, next = true, last = false, ellipsis = 0 }: PaginationControlProps) => {
 
   const total_pages = Math.ceil(total / limit)
   between = between < 1 ? 1 : between
@@ -56,8 +56,8 @@ export const PaginationControl = ({ page = 1, between = 3, total, limit, changeP
         }
         {
           total_pages > (between * 2) + 1 && ellipsis > 0
-          && positions.slice(0, page - 1 <= between ? 0 : ellipsis).map((value, index) => {
-            return <RBPagination.Item key={index}
+          && positions.slice(0, page - 1 <= between ? 0 : ellipsis).map(value => {
+            return <RBPagination.Item key={value}
               onClick={() => value !== page - 1 ? changePage(value + 1) : {}}>
               {value + 1}
             </RBPagination.Item>
@@ -68,9 +68,9 @@ export const PaginationControl = ({ page = 1, between = 3, total, limit, changeP
           total_pages > (between * 2) + 1 && ellipsis > 0 && page - 1 > between
           && <RBPagination.Ellipsis disabled />
         }
-        {range.map((value, index) => {
+        {range.map(value => {
           return <RBPagination.Item active={value === page - 1}
-            key={index}
+            key={value}
             onClick={() => value !== page - 1 ? changePage(value + 1) : {}}>
             {value + 1}
           </RBPagination.Item>
@@ -82,8 +82,8 @@ export const PaginationControl = ({ page = 1, between = 3, total, limit, changeP
         }
         {
           total_pages > (between * 2) + 1 && ellipsis > 0
-          && positions.slice(page >= total_pages - between ? total_pages : total_pages - ellipsis, total_pages).map((value, index) => {
-            return <RBPagination.Item key={index}
+          && positions.slice(page >= total_pages - between ? total_pages : total_pages - ellipsis, total_pages).map(value => {
+            return <RBPagination.Item key={value}
               onClick={() => value !== page - 1 ? changePage(value + 1) : {}}>
               {value + 1}
             </RBPagination.Item>
