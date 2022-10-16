@@ -1,5 +1,5 @@
 {
-  "version": "1.0.2",
+  "version": "1.0.3",
   "license": "MIT",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
@@ -37,14 +37,23 @@
   },
   "name": "react-bootstrap-pagination-control",
   "description": "This component automatically controls the pagination display.",
-  "author": "Victor Aparecido Barbato Rossi",
+  "author": {
+    "name": "Victor Aparecido Barbato Rossi"
+  },
   "repository": {
     "type": "git",
-    "url": "https://github.com/victorap93/react-bootstrap-pagination-control"
+    "url": "git+https://github.com/victorap93/react-bootstrap-pagination-control.git"
   },
   "homepage": "https://github.com/victorap93",
   "module": "dist/react-bootstrap-pagination-control.esm.js",
-  "keywords": ["react", "react-bootstrap", "bootstrap", "pagination-control", "pagination", "control"],
+  "keywords": [
+    "react",
+    "react-bootstrap",
+    "bootstrap",
+    "pagination-control",
+    "pagination",
+    "control"
+  ],
   "size-limit": [
     {
       "path": "dist/react-bootstrap-pagination-control.cjs.production.min.js",
@@ -66,6 +75,7 @@
     "@types/react": "^18.0.21",
     "@types/react-dom": "^18.0.6",
     "babel-loader": "^8.2.5",
+    "chromatic": "^6.10.2",
     "husky": "^8.0.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
@@ -78,5 +88,10 @@
   "dependencies": {
     "bootstrap": "^5.2.1",
     "react-bootstrap": "^2.5.0"
-  }
+  },
+  "bugs": {
+    "url": "https://github.com/victorap93/react-bootstrap-pagination-control/issues"
+  },
+  "readme": "ERROR: No README data found!",
+  "_id": "react-bootstrap-pagination-control@1.0.3"
 }
