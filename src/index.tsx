@@ -6,13 +6,22 @@ export type PaginationControlProps = {
   between?: number,
   total: number,
   limit: number,
-  changePage?: Function,
+  changePage?: (page: number) => any,
   next?: boolean,
   last?: boolean,
   ellipsis?: number
 }
 
-export const PaginationControl = ({ page = 1, between = 3, total, limit, changePage = () => { }, next = true, last = false, ellipsis = 0 }: PaginationControlProps) => {
+export const PaginationControl = ({
+  page = 1,
+  between = 3,
+  total,
+  limit,
+  changePage = page => console.log(page),
+  next = true,
+  last = false,
+  ellipsis = 0
+}: PaginationControlProps) => {
 
   const total_pages = Math.ceil(total / limit)
   between = between < 1 ? 1 : between
