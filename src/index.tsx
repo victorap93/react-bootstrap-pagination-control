@@ -1,15 +1,15 @@
 import React from 'react';
-import { Pagination as RBPagination } from 'react-bootstrap';
+import { Pagination as RBPagination, PaginationProps } from 'react-bootstrap';
 
-export type PaginationControlProps = {
-  page?: number,
-  between?: number,
-  total: number,
-  limit: number,
-  changePage?: (page: number) => any,
-  next?: boolean,
-  last?: boolean,
-  ellipsis?: number
+export interface PaginationControlProps extends PaginationProps {
+  page?: number;
+  between?: number;
+  total: number;
+  limit: number;
+  changePage?: (page: number) => any;
+  next?: boolean;
+  last?: boolean;
+  ellipsis?: number;
 }
 
 export const PaginationControl = ({
@@ -20,7 +20,8 @@ export const PaginationControl = ({
   changePage = page => console.log(page),
   next = true,
   last = false,
-  ellipsis = 0
+  ellipsis = 0,
+  ...paginationProps
 }: PaginationControlProps) => {
 
   const total_pages = Math.ceil(total / limit)
@@ -28,10 +29,7 @@ export const PaginationControl = ({
   page = (page < 1 ? 1 : page > total_pages ? total_pages : page)
   ellipsis = ellipsis < 1 ? 0 : ellipsis + 2 >= between ? between - 2 : ellipsis
 
-  let positions = Array.from({ length: total_pages }, (v, i) => {
-    v
-    return i
-  })
+  let positions = Array.from({ length: total_pages }, (_, i) => i)
 
   const qtd_pages = (between * 2) + 1
   const range = (
@@ -50,7 +48,7 @@ export const PaginationControl = ({
 
   return (
     total !== null && total > 0
-      ? <RBPagination className="justify-content-md-center">
+      ? <RBPagination {...paginationProps}>
         {
           last
           && <RBPagination.First
